@@ -1,0 +1,15 @@
+/* line 5, ../Sass/Common/_common.scss */
+.navbar-default {
+  background-color: #545458;
+}
+
+/* line 9, ../Sass/Common/_common.scss */
+.panel-primary {
+  margin: 20px;
+  padding: 20px;
+}
+
+/* line 14, ../Sass/Common/_common.scss */
+.block {
+  margin: 10px;
+}

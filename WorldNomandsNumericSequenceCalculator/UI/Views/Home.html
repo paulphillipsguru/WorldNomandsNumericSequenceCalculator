@@ -1,0 +1,60 @@
+﻿<article ng-controller="HomeController" >
+    <form name="NumberForm" novalidate>
+        <div class="panel panel-default panel-primary">
+            <p id="heading">
+                Please enter a whole number in the Number field (below).  Once you have entered a valid number, click on the Search button (see below) to see all numbers, odd, even, mixed and Fibonacci number sequences.
+            </p>
+            <div class="form-group">
+                <label for="MaxNumber">Number</label>
+                <input name="MaxNumber" class="form-control" ng-model="MaxNumber" required="required" ng-pattern="/^[0-9]+$/" />
+                <div ng-show="NumberForm.MaxNumber.$error.pattern" id="InvalidMaxNumber" class="info alert-warning">The value that you have entered is invalid, only whole numbers are allowed.</div>
+                <div ng-show="NumberForm.MaxNumber.$error.required" id="RequiredMaxNumber" class="info alert-warning">Please enter a whole number.</div>
+            </div>
+            <div class="block">
+                <button class="btn btn-info center-block" id="Search" ng-click="ListNumbers()">Search</button>
+            </div>
+            <div ng-show="ShowNumbers">
+                <div class="panel panel-default" id="AllNumbers">
+                    <div class="panel-heading">All Numbers</div>
+                    <div class="panel-body">
+                        <span ng-repeat="No in AllNumbers">
+                            {{No}}
+                        </span>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="OddNumbers">
+                    <div class="panel-heading">Odd Numbers</div>
+                    <div class="panel-body">
+                        <span ng-repeat="No in OddNumbers">
+                            {{No}}
+                        </span>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="EvenNumbers">
+                    <div class="panel-heading">Even Numbers</div>
+                    <div class="panel-body">
+                        <span ng-repeat="No in EvenNumbers">
+                            {{No}}
+                        </span>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="MixedNumbers">
+                    <div class="panel-heading">Mixed Numbers</div>
+                    <div class="panel-body">
+                        <span ng-repeat="No in MixedNumbers track by $index">
+                            {{No}}
+                        </span>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="Fibonacci">
+                    <div class="panel-heading">Fibonacci Numbers</div>
+                    <div class="panel-body">
+                        <span ng-repeat="No in FibonacciNumbers track by $index">
+                            {{No}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</article>
