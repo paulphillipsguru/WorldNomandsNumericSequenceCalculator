@@ -33,10 +33,11 @@ See http://angular.github.io/protractor/#/ for more information.
 
 
 To run the tests,  (providing Node.JS has been installed and Protractor has been installed):
+
 1. Edit the UnitTests.js file that resides under the Tests folder and modify the baseUrl to match the newly created web site/application and save the file.
-2. 2. Open up a new command prompt and naivate to the tests folder
-3. 3. Type in (without the quotes) "protractor UnitTests.js"
-4. 4. You should now see the tests being executed.
+2. Open up a new command prompt and naivate to the tests folder
+3. Type in (without the quotes) "protractor UnitTests.js"
+4. You should now see the tests being executed.
 
 
 
